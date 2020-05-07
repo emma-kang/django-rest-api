@@ -19,9 +19,10 @@ from rest_framework import routers
 from survey.views import SurveyViewSet
 
 router = routers.DefaultRouter()
-router.register('survey', SurveyViewSet)
+router.register(r'survey', SurveyViewSet)
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include(router.urls))
+    url(r'^api/', include(router.urls))
 ]
