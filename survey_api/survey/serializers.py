@@ -16,4 +16,4 @@ class UserSerializer(serializers.ModelSerializer):
 class SurveyUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Survey_Users
-        fields = ('id', 'userid', 'surveyid', 'answer', 'postingdate')
+        fields = ('id', 'userid', 'surveyid', 'answer')

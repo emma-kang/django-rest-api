@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'survey_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'survey',
+        'NAME': 'd8f6r3stu96c20',
         'USER': 'muifpcvwjvmeus',
         'PASSWORD': '3a63453354a1a44d6aa1db610c23864ece929582da1f01c11d719adf458c9c77',
         'HOST': 'ec2-50-17-90-177.compute-1.amazonaws.com',

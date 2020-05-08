@@ -15,10 +15,9 @@ class Users(models.Model):
         return self.useremail
 
 class Survey_Users(models.Model):
-    userid = models.IntegerField
-    surveyid = models.IntegerField
+    userid = models.CharField
+    surveyid = models.CharField
     answers = models.CharField(max_length=255)
-    postingdate = models.DateField
 
     def __str__(self):
         return self.userid
