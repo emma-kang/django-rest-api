@@ -1,19 +1,14 @@
 # convert model instance to other format
 
 from rest_framework import serializers
-from .models import Survey, Users, Survey_Users
+from .models import Survey, Results
 
 class SurveySerializer(serializers.ModelSerializer):
     class Meta:
         model = Survey
-        fields = ('id', 'question', 'category')
+        fields = ('id', 'question')
 
-class UserSerializer(serializers.ModelSerializer):
+class ResultsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Users
-        fields = ('id', 'useremail', 'passwords')
-
-class SurveyUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Survey_Users
-        fields = ('id', 'userid', 'surveyid', 'answer')
+        model = Results
+        fields = ('id', 'username', 'useremail', 'answer1', 'answer2', 'answer3', 'answer4')

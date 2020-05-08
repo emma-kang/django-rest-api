@@ -16,12 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
-from survey.views import SurveyViewSet, UserViewSet, SurveyUserViewSet
+from survey.views import SurveyViewSet, ResultsViewSet
 
 router = routers.DefaultRouter()
 router.register(r'survey', SurveyViewSet)
-router.register(r'users', UserViewSet)
-router.register(r'surveyuser', SurveyUserViewSet)
+router.register(r'results', ResultsViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
