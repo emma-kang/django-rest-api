@@ -6,3 +6,19 @@ class Survey(models.Model):
 
     def __str__(self):
         return self.question
+
+class Users(models.Model):
+    useremail = models.CharField(max_length=255)
+    passwords = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.useremail
+
+class Survey_Users(models.Model):
+    userid = models.IntegerField
+    surveyid = models.IntegerField
+    answers = models.CharField(max_length=255)
+    postingdate = models.DateField
+
+    def __str__(self):
+        return self.userid
